@@ -1,0 +1,24 @@
+{
+  "name": "sharp-phash",
+  "version": "0.1.0",
+  "description": "sharp based perceptual hash implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "*.js",
+    "*.md"
+  ],
+  "keywords": ["sharp", "phash", "hash", "image", "perceptual"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "sharp": "^0.17.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "eslint-plugin-promise": "^3.4.0"
+  }
+}

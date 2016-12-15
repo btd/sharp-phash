@@ -1,0 +1,53 @@
+---
+root: true
+
+extends: eslint:recommended
+
+env:
+  node: true
+  mocha: true
+  es6: true
+
+ecmaVersion: 6
+
+plugins:
+  - promise
+
+rules:
+  quotes: 0
+  indent: 0
+  require-jsdoc: 0
+  eqeqeq: 0
+  curly: 0
+  no-invalid-this: 0
+  default-case: 0
+  no-nested-ternary: 0
+  no-underscore-dangle: 0
+  func-style: 0
+  new-cap: 0
+  callback-return: 0
+  no-loop-func: 0
+  strict: [2, "global"]
+  semi: [1, "always"]
+  space-before-function-paren: [1, "never"]
+  space-before-blocks: [1, "always"]
+  no-sequences: 2
+  dot-notation: 1
+  dot-location: [2, "property"]
+  keyword-spacing:
+    - 2
+    - overrides:
+        if:
+          after: false
+        for:
+          after: false
+        while:
+          after: false
+
+  global-require: 2
+  no-path-concat: 2
+
+  promise/param-names: 2
+  promise/always-return: 0
+  promise/catch-or-return: 2
+  promise/no-native: 2
