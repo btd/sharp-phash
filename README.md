@@ -25,6 +25,7 @@ Promise.all([
   phash(img3)
 ])
   .then(([hash1, hash2, hash3]) => {
+    // hash returned is 64 characters length string with 0 and 1 only
     assert(dist(hash1, hash2) < 5);
     assert(dist(hash2, hash3) < 5);
     assert(dist(hash3, hash1) < 5);
