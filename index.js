@@ -61,6 +61,7 @@ module.exports = function phash(image) {
       //.normalise()
       .resize(SAMPLE_SIZE, SAMPLE_SIZE)
       .ignoreAspectRatio()
+      .rotate()
       .raw()
       .toBuffer(function(err, data) {
         if(err) {
