@@ -58,7 +58,6 @@ module.exports = function phash(image) {
   return new Promise((resolve, reject) => {
     sharp(image)
       .greyscale()
-      //.normalise()
       .resize(SAMPLE_SIZE, SAMPLE_SIZE)
       .ignoreAspectRatio()
       .rotate()
@@ -84,7 +83,7 @@ module.exports = function phash(image) {
           let totalSum = 0;
           for(let x = 0; x < LOW_SIZE; x++) {
             for(let y = 0; y < LOW_SIZE; y++) {
-              totalSum += dct[x][y];
+              totalSum += dct[x + 1][y + 1];
             }
           }
 
@@ -95,7 +94,7 @@ module.exports = function phash(image) {
 
           for(let x = 0; x < LOW_SIZE; x++) {
             for(let y = 0; y < LOW_SIZE; y++) {
-              fingerprint += dct[x][y] > avg ? "1" : "0";
+              fingerprint += dct[x + 1][y + 1] > avg ? "1" : "0";
             }
           }
 
