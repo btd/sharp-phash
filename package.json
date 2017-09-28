@@ -10,15 +10,21 @@
     "*.js",
     "*.md"
   ],
-  "keywords": ["sharp", "phash", "hash", "image", "perceptual"],
+  "keywords": [
+    "sharp",
+    "phash",
+    "hash",
+    "image",
+    "perceptual"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^3.4.6",
-    "sharp": "^0.17.0"
+    "bluebird": "^3.5.0",
+    "sharp": "^0.18.4"
   },
   "devDependencies": {
-    "eslint": "^3.12.2",
-    "eslint-plugin-promise": "^3.4.0"
+    "eslint": "^3.19.0",
+    "eslint-plugin-promise": "^3.5.0"
   }
 }
