@@ -20,11 +20,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^3.5.0",
-    "sharp": "^0.18.4"
+    "bluebird": "^3.5.1",
+    "sharp": "^0.20.5"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
-    "eslint-plugin-promise": "^3.5.0"
+    "eslint-plugin-promise": "^3.8.0"
   }
 }
