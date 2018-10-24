@@ -20,7 +20,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^3.5.1",
     "sharp": "^0.20.5"
   },
   "devDependencies": {

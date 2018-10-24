@@ -1,20 +1,17 @@
-'use strict';
+"use strict";
 
-const sharp = require('sharp');
-const Promise = require('bluebird');
-
+const sharp = require("sharp");
 
 const SAMPLE_SIZE = 32;
 
 function initSQRT(N) {
   let c = new Array(N);
   for(let i = 1; i < N; i++) {
-    c[i]=1;
+    c[i] = 1;
   }
   c[0] = 1 / Math.sqrt(2.0);
   return c;
 }
-
 
 const SQRT = initSQRT(SAMPLE_SIZE);
 
@@ -44,7 +41,7 @@ function applyDCT(f, size) {
           sum += COS[i][u] * COS[j][v] * f[i][j];
         }
       }
-      sum *= ((SQRT[u] * SQRT[v]) / 4);
+      sum *= (SQRT[u] * SQRT[v]) / 4;
       F[u][v] = sum;
     }
   }
@@ -52,7 +49,6 @@ function applyDCT(f, size) {
 }
 
 const LOW_SIZE = 8;
-
 
 module.exports = function phash(image) {
   return new Promise((resolve, reject) => {
@@ -66,7 +62,6 @@ module.exports = function phash(image) {
         if(err) {
           reject(err);
         } else {
-
           // copy signal
           let s = new Array(SAMPLE_SIZE);
           for(let x = 0; x < SAMPLE_SIZE; x++) {
@@ -90,7 +85,7 @@ module.exports = function phash(image) {
           let avg = totalSum / (LOW_SIZE * LOW_SIZE);
 
           // compute hash
-          let fingerprint = '';
+          let fingerprint = "";
 
           for(let x = 0; x < LOW_SIZE; x++) {
             for(let y = 0; y < LOW_SIZE; y++) {
