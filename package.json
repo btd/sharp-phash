@@ -1,6 +1,6 @@
 {
   "name": "sharp-phash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "sharp based perceptual hash implementation",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "sharp": "^0.20.5"
+    "sharp": "^0.21.0"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
