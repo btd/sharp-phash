@@ -1,6 +1,6 @@
 {
   "name": "sharp-phash",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "sharp based perceptual hash implementation",
   "main": "index.js",
   "scripts": {
