@@ -35,15 +35,6 @@ rules:
   no-sequences: 2
   dot-notation: 1
   dot-location: [2, "property"]
-  keyword-spacing:
-    - 2
-    - overrides:
-        if:
-          after: false
-        for:
-          after: false
-        while:
-          after: false
 
   global-require: 2
   no-path-concat: 2
@@ -51,4 +42,3 @@ rules:
   promise/param-names: 2
   promise/always-return: 0
   promise/catch-or-return: 2
-  promise/no-native: 2

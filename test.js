@@ -1,24 +1,13 @@
+/* eslint-disable no-console */
 "use strict";
 
-const fs = require("fs");
+const fs = require("fs").promises;
 const path = require("path");
 
 const assert = require("assert");
 
 const phash = require("./index");
 const dist = require("./distance");
-
-const readFile = fileName => {
-  return new Promise((resolve, reject) => {
-    fs.readFile(fileName, (err, res) => {
-      if(err) {
-        return reject(err);
-      }
-
-      resolve(res);
-    });
-  });
-};
 
 const lenna_png = "Lenna.png";
 const lenna_jpg = "Lenna.jpg";
@@ -36,7 +25,7 @@ const fb5 = "fb5.jpg";
 const fb6 = "fb6.jpg";
 
 function getPHash(img) {
-  return readFile(path.join(".", "img", img)).then(buf => phash(buf));
+  return fs.readFile(path.join(".", "img", img)).then(buf => phash(buf));
 }
 
 function bitCount(hash) {
@@ -52,6 +41,7 @@ hash2: ${hash2} (${bitCount(hash2)})
 distance: ${d}
 `;
     assert.ok(cond(d), text);
+    console.log("Test PASS", img1, img2, cond.name);
   });
 }
 

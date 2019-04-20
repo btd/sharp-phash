@@ -20,10 +20,13 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "sharp": "^0.21.0"
+    "sharp": "^0.22.0"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-plugin-promise": "^3.8.0"
+    "eslint": "^5.16.0",
+    "eslint-plugin-promise": "^4.1.1"
+  },
+  "engines": {
+    "node": ">= 8.10"
   }
 }
