@@ -5,7 +5,7 @@ const sharp = require("sharp");
 const SAMPLE_SIZE = 32;
 
 function initSQRT(N) {
-  let c = new Array(N);
+  const c = new Array(N);
   for (let i = 1; i < N; i++) {
     c[i] = 1;
   }
@@ -16,7 +16,7 @@ function initSQRT(N) {
 const SQRT = initSQRT(SAMPLE_SIZE);
 
 function initCOS(N) {
-  let cosines = new Array(N);
+  const cosines = new Array(N);
   for (let k = 0; k < N; k++) {
     cosines[k] = new Array(N);
     for (let n = 0; n < N; n++) {
@@ -50,15 +50,15 @@ function applyDCT(f, size) {
 
 const LOW_SIZE = 8;
 
-module.exports = async function phash(image) {
-  const data = await sharp(image)
+module.exports = async function phash(image, opts = { sharp: sharp }) {
+  const data = await opts.sharp(image)
     .greyscale()
     .resize(SAMPLE_SIZE, SAMPLE_SIZE, { fit: "fill" })
     .rotate()
     .raw()
     .toBuffer();
   // copy signal
-  let s = new Array(SAMPLE_SIZE);
+  const s = new Array(SAMPLE_SIZE);
   for (let x = 0; x < SAMPLE_SIZE; x++) {
     s[x] = new Array(SAMPLE_SIZE);
     for (let y = 0; y < SAMPLE_SIZE; y++) {
@@ -67,7 +67,7 @@ module.exports = async function phash(image) {
   }
 
   // apply 2D DCT II
-  let dct = applyDCT(s, SAMPLE_SIZE);
+  const dct = applyDCT(s, SAMPLE_SIZE);
 
   // get AVG on high frequencies
   let totalSum = 0;
@@ -77,7 +77,7 @@ module.exports = async function phash(image) {
     }
   }
 
-  let avg = totalSum / (LOW_SIZE * LOW_SIZE);
+  const avg = totalSum / (LOW_SIZE * LOW_SIZE);
 
   // compute hash
   let fingerprint = "";

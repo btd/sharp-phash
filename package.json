@@ -17,16 +17,16 @@
     "image",
     "perceptual"
   ],
-  "author": "",
+  "author": "Denis Bardadym <bardadymchik@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "sharp": "^0.22.0"
+    "sharp": "^0.25.4"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-promise": "^4.1.1"
+    "eslint": "^7.2.0",
+    "eslint-plugin-promise": "^4.2.1"
   },
   "engines": {
-    "node": ">= 8.10"
+    "node": ">= 10"
   }
 }

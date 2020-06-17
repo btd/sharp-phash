@@ -25,7 +25,7 @@ const fb5 = "fb5.jpg";
 const fb6 = "fb6.jpg";
 
 function getPHash(img) {
-  return fs.readFile(path.join(".", "img", img)).then(buf => phash(buf));
+  return fs.readFile(path.join(".", "img", img)).then((buf) => phash(buf));
 }
 
 function bitCount(hash) {
@@ -33,21 +33,23 @@ function bitCount(hash) {
 }
 
 function testCase(img1, img2, cond) {
-  return Promise.all([getPHash(img1), getPHash(img2)]).then(([hash1, hash2]) => {
-    const d = dist(hash1, hash2);
-    const text = `${img1} vs ${img2}
+  return Promise.all([getPHash(img1), getPHash(img2)]).then(
+    ([hash1, hash2]) => {
+      const d = dist(hash1, hash2);
+      const text = `${img1} vs ${img2}
 hash1: ${hash1} (${bitCount(hash1)})
 hash2: ${hash2} (${bitCount(hash2)})
 distance: ${d}
 `;
-    assert.ok(cond(d), text);
-    console.log("Test PASS", img1, img2, cond.name);
-  });
+      assert.ok(cond(d), text);
+      console.log("Test PASS", img1, img2, cond.name);
+    }
+  );
 }
 
-const SIMILAR = d => d <= 5;
-const LIKELY_SIMILAR = d => d <= 10;
-const NOT_SIMILAR = d => d > 10;
+const SIMILAR = (d) => d <= 5;
+const LIKELY_SIMILAR = (d) => d <= 10;
+const NOT_SIMILAR = (d) => d > 10;
 
 Promise.all([
   testCase(lenna_png, lenna_jpg, SIMILAR),
@@ -57,8 +59,8 @@ Promise.all([
   testCase(fb1, fb2, NOT_SIMILAR),
   testCase(fb1, lenna_jpg, NOT_SIMILAR),
   testCase(fb3, fb4, NOT_SIMILAR),
-  testCase(fb5, fb6, NOT_SIMILAR)
-]).catch(err => {
+  testCase(fb5, fb6, NOT_SIMILAR),
+]).catch((err) => {
   console.log("Test fail");
   console.log(err.message);
 });

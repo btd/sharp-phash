@@ -35,6 +35,8 @@ rules:
   no-sequences: 2
   dot-notation: 1
   dot-location: [2, "property"]
+  prefer-const: 2
+  prefer-arrow-callback: 2
 
   global-require: 2
   no-path-concat: 2

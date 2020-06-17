@@ -31,3 +31,13 @@ Promise.all([
     assert(dist(hash3, hash1) < 5);
   });
 ```
+
+## Your own sharp version
+
+```js
+const sharp = require('sharp');
+const phash = require('sharp-phash');
+
+phash(..., { sharp })
+
+```
