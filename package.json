@@ -24,7 +24,7 @@
   "author": "Denis Bardadym <bardadymchik@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "sharp": "^0.25.4"
+    "sharp": "^0.26.1"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
