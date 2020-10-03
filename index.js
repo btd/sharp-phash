@@ -50,8 +50,8 @@ function applyDCT(f, size) {
 
 const LOW_SIZE = 8;
 
-module.exports = async function phash(image, opts = { sharp: sharp }) {
-  const data = await opts.sharp(image)
+module.exports = async function phash(image) {
+  const data = await sharp(image)
     .greyscale()
     .resize(SAMPLE_SIZE, SAMPLE_SIZE, { fit: "fill" })
     .rotate()
