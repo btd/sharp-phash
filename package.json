@@ -23,12 +23,13 @@
   ],
   "author": "Denis Bardadym <bardadymchik@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "sharp": "^0.25.4"
+  "peerDependencies": {
+    "sharp": ">= 0.25.4"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
-    "eslint-plugin-promise": "^4.2.1"
+    "eslint-plugin-promise": "^4.2.1",
+    "sharp": "^0.26.1"
   },
   "engines": {
     "node": ">= 10"
