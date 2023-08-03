@@ -7,6 +7,7 @@
     "url": "https://github.com/btd/sharp-phash"
   },
   "main": "index.js",
+  "types": ["./types/index.d.ts", "./types/distance.d.ts"],
   "scripts": {
     "test": "node test.js"
   },
