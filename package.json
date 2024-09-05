@@ -7,12 +7,14 @@
     "url": "https://github.com/btd/sharp-phash"
   },
   "main": "index.js",
+  "types": "sharp-phash.d.ts",
   "scripts": {
     "test": "node test.js"
   },
   "files": [
     "*.js",
-    "*.md"
+    "*.md",
+    "sharp-phash.d.ts"
   ],
   "keywords": [
     "sharp",
@@ -29,7 +31,7 @@
   "devDependencies": {
     "eslint": "^7.2.0",
     "eslint-plugin-promise": "^4.2.1",
-    "sharp": "^0.31.3"
+    "sharp": "^0.33.5"
   },
   "engines": {
     "node": ">= 10"
