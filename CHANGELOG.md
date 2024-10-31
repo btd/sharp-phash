@@ -1,3 +1,7 @@
+# 2.2.0 2024-10-31
+
+* Added type definition
+
 # 2.1.0 2023-02-16
 
 * Allow to pass options for **sharp** builder
