@@ -7,12 +7,14 @@
     "url": "https://github.com/btd/sharp-phash"
   },
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "node test.js"
   },
   "files": [
     "*.js",
-    "*.md"
+    "*.md",
+    "*.d.ts"
   ],
   "keywords": [
     "sharp",
@@ -24,12 +26,12 @@
   "author": "Denis Bardadym <bardadymchik@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "sharp": ">= 0.25.4"
+    "sharp": ">= 0.32.0"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
     "eslint-plugin-promise": "^4.2.1",
-    "sharp": "^0.31.3"
+    "sharp": "^0.32.0"
   },
   "engines": {
     "node": ">= 10"
